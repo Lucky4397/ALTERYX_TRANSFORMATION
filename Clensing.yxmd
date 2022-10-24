@@ -1,0 +1,540 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">Z:\Assignment 3 Test Data.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>DATA</AnnotationText>
+          <DefaultAnnotationText>Assignment 3 Test Data.csv</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Column1" size="254" source="File: Z:\Assignment 3 Test Data.csv" type="V_WString" />
+            <Field name="Column3" size="254" source="File: Z:\Assignment 3 Test Data.csv" type="V_WString" />
+            <Field name="Column4" size="254" source="File: Z:\Assignment 3 Test Data.csv" type="V_WString" />
+            <Field name="Column5" size="254" source="File: Z:\Assignment 3 Test Data.csv" type="V_WString" />
+            <Field name="Column6" size="254" source="File: Z:\Assignment 3 Test Data.csv" type="V_WString" />
+            <Field name="Column7" size="254" source="File: Z:\Assignment 3 Test Data.csv" type="V_WString" />
+            <Field name="Column8" size="254" source="File: Z:\Assignment 3 Test Data.csv" type="V_WString" />
+            <Field name="Column9" size="254" source="File: Z:\Assignment 3 Test Data.csv" type="V_WString" />
+            <Field name="Column10" size="254" source="File: Z:\Assignment 3 Test Data.csv" type="V_WString" />
+            <Field name="Column11" size="254" source="File: Z:\Assignment 3 Test Data.csv" type="V_WString" />
+            <Field name="Column12" size="254" source="File: Z:\Assignment 3 Test Data.csv" type="V_WString" />
+            <Field name="Column13" size="254" source="File: Z:\Assignment 3 Test Data.csv" type="V_WString" />
+            <Field name="Column14" size="254" source="File: Z:\Assignment 3 Test Data.csv" type="V_WString" />
+            <Field name="Column92" size="254" source="File: Z:\Assignment 3 Test Data.csv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Transpose.Transpose">
+        <Position x="126" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ErrorWarn>Warn</ErrorWarn>
+          <KeyFields />
+          <DataFields>
+            <Field field="Column1" selected="True" />
+            <Field field="Column3" selected="True" />
+            <Field field="Column4" selected="True" />
+            <Field field="Column5" selected="True" />
+            <Field field="Column6" selected="True" />
+            <Field field="Column7" selected="True" />
+            <Field field="Column8" selected="True" />
+            <Field field="Column9" selected="True" />
+            <Field field="Column10" selected="True" />
+            <Field field="Column11" selected="True" />
+            <Field field="Column12" selected="True" />
+            <Field field="Column13" selected="True" />
+            <Field field="Column14" selected="True" />
+            <Field field="Column92" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </DataFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>DATA TRANSPOSE (ROW-COL)</AnnotationText>
+          <DefaultAnnotationText><![CDATA[Data Transpose ]]></DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTranspose" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="198" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Value</Field>
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>Value</RootName>
+          <Delimeters value="=" />
+          <NumFields value="2" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>DATA SPLITTED</AnnotationText>
+          <DefaultAnnotationText><![CDATA[DATA SPLITTED ]]></DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="270" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Value1" selected="True" />
+            <SelectField field="Value2" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>SELECT FUNCTION</AnnotationText>
+          <DefaultAnnotationText><![CDATA[SELECT ]]></DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="342" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>Value1</UpdateField_Name>
+          <CreateField_Name>Record_ID_Group</CreateField_Name>
+          <CreateField_Type>V_WString</CreateField_Type>
+          <CreateField_Size>256</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>if [Value1]="record_id" then [Value2] else [Row-1:Record_ID_Group] endif</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>FUNC FOR ADDN COLN WITH REC_ID</AnnotationText>
+          <DefaultAnnotationText>if [Value1]="record_id" then [Value2] else [Row-1:Record_ID_G...</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="414" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="Record_ID_Group" />
+          </GroupFields>
+          <HeaderField field="Value1" />
+          <DataField field="Value2" />
+          <Methods>
+            <Method method="First" />
+            <Separator>,</Separator>
+            <FieldSize value="2048" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>DATA TRANSPOSE (COL - ROW)</AnnotationText>
+          <DefaultAnnotationText>DATA TRANSPOSE (COL - ROW)</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Record_ID_Group" size="256" source="CrossTab:Group:First:" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="agent_id" size="254" source="TextToColumns: Parsed from Value" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="attempt" size="254" source="TextToColumns: Parsed from Value" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="call_result" size="254" source="TextToColumns: Parsed from Value" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="call_time" size="254" source="TextToColumns: Parsed from Value" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="campaign_id" size="254" source="TextToColumns: Parsed from Value" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="contact_info_type" size="254" source="TextToColumns: Parsed from Value" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="daily_from" size="254" source="TextToColumns: Parsed from Value" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="daily_till" size="254" source="TextToColumns: Parsed from Value" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="dial_sched_time" size="254" source="TextToColumns: Parsed from Value" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="FLD_CAM_LANGUAGE" size="254" source="TextToColumns: Parsed from Value" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="record_id" size="254" source="TextToColumns: Parsed from Value" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="record_status" size="254" source="TextToColumns: Parsed from Value" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="record_type" size="254" source="TextToColumns: Parsed from Value" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="tz_dbid" size="254" source="TextToColumns: Parsed from Value" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="510" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Record_ID_Group" selected="False" />
+            <SelectField field="record_id" selected="True" />
+            <SelectField field="contact_info_type" selected="True" />
+            <SelectField field="record_type" selected="True" />
+            <SelectField field="record_status" selected="True" />
+            <SelectField field="call_result" selected="True" />
+            <SelectField field="attempt" selected="True" />
+            <SelectField field="dial_sched_time" selected="True" />
+            <SelectField field="call_time" selected="True" />
+            <SelectField field="daily_from" selected="True" />
+            <SelectField field="daily_till" selected="True" />
+            <SelectField field="tz_dbid" selected="True" />
+            <SelectField field="campaign_id" selected="True" />
+            <SelectField field="agent_id" selected="True" />
+            <SelectField field="FLD_CAM_LANGUAGE" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>OUTP SELECTION</AnnotationText>
+          <DefaultAnnotationText>OUTP SELECTION</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings>
+        <Position x="594" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"record_id","contact_info_type","record_type","record_status","call_result","attempt","dial_sched_time","call_time","daily_from","daily_till","tz_dbid","campaign_id","agent_id","FLD_CAM_LANGUAGE"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">False</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">True</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">True</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="654" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [FLD_CAM_LANGUAGE]=&quot;E&quot; THEN &quot;ENGLISH&quot; ELSE &quot;FRENCH&quot; ENDIF" field="FLD_CAM_LANGUAGE" size="254" type="V_WString" />
+            <FormulaField expression="Switch([tz_dbid],[tz_dbid],&#xA;&quot;Atlst&quot;,&quot;AST&quot;)&#xA;" field="tz_dbid" size="254" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText><![CDATA[CONDN FOR LANGUAGE
+]]></AnnotationText>
+          <DefaultAnnotationText>FLD_CAM_LANGUAGE = IF [FLD_CAM_LANGUAGE]="E" THEN "ENGLISH" ELSE "FRENCH" ENDIF
+...</DefaultAnnotationText>
+          <Left value="True" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicRename.DynamicRename">
+        <Position x="726" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RenameMode>Formula</RenameMode>
+          <Fields orderChanged="False">
+            <Field name="record_id" />
+            <Field name="contact_info_type" />
+            <Field name="record_type" />
+            <Field name="record_status" />
+            <Field name="call_result" />
+            <Field name="attempt" />
+            <Field name="dial_sched_time" />
+            <Field name="call_time" />
+            <Field name="daily_from" />
+            <Field name="daily_till" />
+            <Field name="tz_dbid" />
+            <Field name="campaign_id" />
+            <Field name="agent_id" />
+            <Field name="FLD_CAM_LANGUAGE" />
+            <Field name="*Unknown" />
+          </Fields>
+          <Expression>Uppercase([_CurrentField_])</Expression>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Value" name="RECORD_ID" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="CONTACT_INFO_TYPE" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="RECORD_TYPE" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="RECORD_STATUS" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="CALL_RESULT" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="ATTEMPT" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="DIAL_SCHED_TIME" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="CALL_TIME" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="DAILY_FROM" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="DAILY_TILL" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="TZ_DBID" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="CAMPAIGN_ID" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="AGENT_ID" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field description="TextToColumns: Parsed from Value" name="FLD_CAM_LANGUAGE" size="254" source="Formula: IF [FLD_CAM_LANGUAGE]=&quot;E&quot; THEN &quot;ENGLISH&quot; ELSE &quot;FRENCH&quot; ENDIF" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicRename" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="810" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="RECORD_ID" selected="True" />
+            <Field field="CONTACT_INFO_TYPE" selected="True" />
+            <Field field="RECORD_TYPE" selected="True" />
+            <Field field="RECORD_STATUS" selected="True" />
+            <Field field="CALL_RESULT" selected="True" />
+            <Field field="ATTEMPT" selected="True" />
+            <Field field="DIAL_SCHED_TIME" selected="True" />
+            <Field field="CALL_TIME" selected="True" />
+            <Field field="DAILY_FROM" selected="True" />
+            <Field field="DAILY_TILL" selected="True" />
+            <Field field="TZ_DBID" selected="True" />
+            <Field field="CAMPAIGN_ID" selected="True" />
+            <Field field="AGENT_ID" selected="True" />
+            <Field field="FLD_CAM_LANGUAGE" selected="True" />
+            <Field field="*Unknown" selected="False" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="TextToColumns: Parsed from Value" name="RECORD_ID" source="Formula: [_CurrentField_]" type="Int32" />
+            <Field description="TextToColumns: Parsed from Value" name="CONTACT_INFO_TYPE" size="10" source="Formula: [_CurrentField_]" type="String" />
+            <Field description="TextToColumns: Parsed from Value" name="RECORD_TYPE" size="20" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field description="TextToColumns: Parsed from Value" name="RECORD_STATUS" size="9" source="Formula: [_CurrentField_]" type="String" />
+            <Field description="TextToColumns: Parsed from Value" name="CALL_RESULT" size="26" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field description="TextToColumns: Parsed from Value" name="ATTEMPT" source="Formula: [_CurrentField_]" type="Byte" />
+            <Field description="TextToColumns: Parsed from Value" name="DIAL_SCHED_TIME" size="21" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field description="TextToColumns: Parsed from Value" name="CALL_TIME" size="21" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field description="TextToColumns: Parsed from Value" name="DAILY_FROM" size="11" source="Formula: [_CurrentField_]" type="String" />
+            <Field description="TextToColumns: Parsed from Value" name="DAILY_TILL" size="10" source="Formula: [_CurrentField_]" type="String" />
+            <Field description="TextToColumns: Parsed from Value" name="TZ_DBID" size="3" source="Formula: Switch([tz_dbid],[tz_dbid],&#xA;&quot;Atlst&quot;,&quot;AST&quot;)&#xA;" type="String" />
+            <Field description="TextToColumns: Parsed from Value" name="CAMPAIGN_ID" size="4" source="Formula: [_CurrentField_]" type="String" />
+            <Field description="TextToColumns: Parsed from Value" name="AGENT_ID" size="31" source="Formula: [_CurrentField_]" type="V_String" />
+            <Field description="TextToColumns: Parsed from Value" name="FLD_CAM_LANGUAGE" size="7" source="Formula: IF [FLD_CAM_LANGUAGE]=&quot;E&quot; THEN &quot;ENGLISH&quot; ELSE &quot;FRENCH&quot; ENDIF" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="894" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\Lucky\AppData\Local\Temp\Engine_7876_b5c94ac4708d3544bfc72be90a68ee56_\Engine_7876_554868989a140b4d807b86c9eb92ab8d~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="918" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">Z:\Assignment 3 Test Data.csv</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Assignment 3 Test Data.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="18" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output26" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="22" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Deliverable - 1</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="29aad7dd-f65d-45e5-91bb-cbe6c03190b3" />
+      <Telemetry>
+        <PreviousWorkflowId value="ce935f1d-0971-40b9-9af9-a98543c49e36" />
+        <OriginWorkflowId value="ce935f1d-0971-40b9-9af9-a98543c49e36" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
